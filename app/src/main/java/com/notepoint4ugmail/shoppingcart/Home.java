@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +38,7 @@ public class Home extends AppCompatActivity {
 
     ArrayList<String> productName, productPrice, productId, productImageUrl;
     ListView list_view_home;
+    ImageView image;
 
     RequestQueue requestQueue;
 
