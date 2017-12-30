@@ -27,6 +27,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -223,6 +224,12 @@ public class Home extends AppCompatActivity {
             itemName.setText(productName.get(i));
             final TextView itemPrice = view.findViewById(R.id.view_price_text);
             itemPrice.setText(productPrice.get(i));
+
+            ImageView item_image= view.findViewById(R.id.product_image_url);
+            /* Showing images to the screen.*/
+            Picasso.with(Home.this)
+                    .load(productImageUrl.get(i))
+                    .into(item_image);
 
             view.findViewById(R.id.btn_add_to_cart).setOnClickListener(new View.OnClickListener() {
                 @Override
