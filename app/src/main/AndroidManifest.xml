@@ -15,7 +15,6 @@
         <activity android:name=".Register" />
         <activity android:name=".Home" />
         <activity android:name=".Profile" />
-        <activity android:name=".ProductDescription" />
         <activity android:name=".ItemsInCart" />
         <activity android:name=".CheckOut" />
         <activity android:name=".SplashScreen">

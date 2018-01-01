@@ -1,95 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/view_name_text"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:hint="Name"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/quantity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_name_text"
+        android:layout_marginTop="15dp"
+        android:fontFamily="serif"
+        android:text="Quantity:"
+        android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/view_name_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name"
-                android:paddingLeft="8dp"
-                android:textSize="16sp" />
-        </LinearLayout>
+    <EditText
+        android:id="@+id/click_quantity"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/quantity_text"
+        android:layout_alignBottom="@+id/quantity_text"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/btn_update_quantity"
+        android:layout_toStartOf="@+id/btn_update_quantity"
+        android:fontFamily="serif"
+        android:hint="Quantity"
+        android:paddingLeft="10dp"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/quantity_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quantity:"
-                android:textSize="16sp" />
+    <Button
+        android:id="@+id/btn_update_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/quantity_text"
+        android:fontFamily="serif"
+        android:paddingBottom="15dp"
+        android:text="update Qunatity" />
 
 
-            <TextView
-                android:id="@+id/click_quantity"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:hint="Quantity"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:clickable="true"
-                android:focusable="true"/>
+    <TextView
+        android:id="@+id/price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/click_quantity"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:text="Price: "
+        android:textSize="16sp" />
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/rupees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/price_text"
+        android:layout_alignBottom="@+id/price_text"
+        android:layout_toEndOf="@+id/quantity_text"
+        android:layout_toRightOf="@+id/quantity_text"
+        android:fontFamily="serif"
+        android:text="Rs "
+        android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/view_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rupees"
+        android:layout_alignBottom="@+id/rupees"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_toEndOf="@+id/rupees"
+        android:layout_toRightOf="@+id/rupees"
+        android:fontFamily="serif"
+        android:hint="Price"
+        android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/price_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Price: "
-                android:textSize="16sp" />
-            <TextView
-                android:id="@+id/rupees"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:text="Rs "
-                android:textSize="16sp" />
+    <Button
+        android:id="@+id/btn_remove_item"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/view_price_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:fontFamily="serif"
+        android:text="Remove" />
 
-            <TextView
-                android:id="@+id/view_price_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Price"
-                android:paddingLeft="16dp"
-                android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/btn_remove_item"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:paddingBottom="15dp"
-                android:layout_marginLeft="100dp"
-                android:text="Remove" />
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

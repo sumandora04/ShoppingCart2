@@ -39,7 +39,7 @@ public class Home extends AppCompatActivity {
 
     ArrayList<String> productName, productPrice, productId, productImageUrl;
     ListView list_view_home;
-    ImageView image;
+    //ImageView image;
 
     RequestQueue requestQueue;
 
@@ -239,8 +239,8 @@ public class Home extends AppCompatActivity {
                     final String imageUrl = productImageUrl.get(i);
                     String item_name = productName.get(i);
                     String item_price = productPrice.get(i);
-                    String item_id = product_id;
-                    boolean b = cart.db_addToCart(item_id, item_name, item_price, "1", imageUrl);
+                   // String item_id = product_id;
+                    boolean b = cart.db_addToCart(product_id, item_name, item_price, "1", imageUrl);
                     if (b) {
                         Toast.makeText(Home.this, "Added", Toast.LENGTH_SHORT).show();
                     } else {
