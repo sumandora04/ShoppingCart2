@@ -40,13 +40,10 @@ public class Home extends AppCompatActivity {
     ArrayList<String> productName, productPrice, productId, productImageUrl;
     ListView list_view_home;
     //ImageView image;
-
     RequestQueue requestQueue;
-
     EditText search_text;
     Button btn_search;
     SharedPreferences preferences;
-
     SharedPreferences.Editor editor;
     String str_id;
 

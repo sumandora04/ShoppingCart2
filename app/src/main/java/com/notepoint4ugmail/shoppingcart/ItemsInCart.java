@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 public class ItemsInCart extends AppCompatActivity {
 
-
     ListView listView_items_in_cart;
     ArrayList<String> ary_id, ary_name;
     ArrayList<Integer> ary_quantity, ary_price;
